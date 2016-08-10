@@ -24,7 +24,7 @@ namespace ArraysAndStrings
             Console.WriteLine(IsUnique.BookSolution("abcdefghijklmnopqrstvwxyz"));// True
             Console.WriteLine(IsUnique.BookSolution("abcdefghijklmnopqrstvwxyzzz"));// False 2 ZZ
             Console.WriteLine("#############################################");
-            Console.WriteLine("check Permutation");
+            Console.WriteLine("Check Permutation");
             Console.WriteLine("Method_1");
             Console.WriteLine(CheckPermutation.Method_1("roma","amor"));// True
             Console.WriteLine(CheckPermutation.Method_1("tact coa", "taco cat"));// True
@@ -41,6 +41,18 @@ namespace ArraysAndStrings
             Console.WriteLine(CheckPermutation.BookSolution("roma", "amoe"));// False
             Console.WriteLine(CheckPermutation.BookSolution("tact coa", "taco cae"));// False
             Console.WriteLine("#############################################");
+            Console.WriteLine("URLify");
+            Console.WriteLine("Method_1");
+            Console.WriteLine(URLify.Method_1("Mr John Smith"));//
+            Console.WriteLine(URLify.Method_1("1Espace 2Espacos  3Espacos   4Espacos    "));//
+            Console.WriteLine("Book Solution");
+            char[] str = "Mr John Smith    ".ToCharArray();
+           // URLify.BookSolution(str, 13);
+            Console.WriteLine(str);//
+            Console.WriteLine("#############################################");
+            Console.WriteLine("Palindrome Permutation");
+            Console.WriteLine(PalindromePermutation.Method_1("Tact Coa"));//
+            Console.WriteLine(PalindromePermutation.Method_2("Tact Coa"));//
             Console.ReadLine();
         }
     }
