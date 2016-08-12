@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArraysAndStrings
 {
     //Verifcar se string possui apenas caracteres unicos
     public static class IsUnique
     {
-
         public static bool Method_1(String str)
         {
             //Primeiro confirmar parametros de entrada
@@ -32,6 +26,7 @@ namespace ArraysAndStrings
             }
             return true;
         }
+
         public static bool Method_2(String str)
         {
             //Primeiro confirmar parametros de entrada
@@ -53,6 +48,7 @@ namespace ArraysAndStrings
             }
             return true;
         }
+
         //Força bruta O(N^2)
         public static bool Method_3(String str)
         {
@@ -62,10 +58,10 @@ namespace ArraysAndStrings
             {
                 return true;
             }
-            for (int i = 0; i < str.Length-1; ++i)
+            for (int i = 0; i < str.Length - 1; ++i)
             {
                 char ch = str[i];
-                for (int j =i+1; j < str.Length; j++)
+                for (int j = i + 1; j < str.Length; j++)
                 {
                     if (str[j] == ch)
                         return false;
@@ -74,13 +70,13 @@ namespace ArraysAndStrings
             return true;
         }
 
-        public static bool BookSolution(String str)
+        public static bool BestSolution(String str)
         {
             int checker = 0;
             for (int i = 0; i < str.Length; ++i)
             {
                 int val = str[i] - 'a';
-                if((checker & (1 << val))> 0)
+                if ((checker & (1 << val)) > 0)
                 {
                     return false;
                 }

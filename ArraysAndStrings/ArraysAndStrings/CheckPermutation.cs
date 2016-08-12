@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArraysAndStrings
 {
@@ -29,7 +25,7 @@ namespace ArraysAndStrings
                 if (array[ch] < 0)
                     return false;
             }
-         
+
             return true;
         }
 
@@ -54,24 +50,24 @@ namespace ArraysAndStrings
                 if (array[ch] < 0)
                     return false;
             }
-            
+
             return true;
         }
 
-        public static bool BookSolution(String orig, String permu)
+        public static bool BestSolution(String orig, String permu)
         {
             if (orig.Length != permu.Length)
             {
                 return false;
             }
-            int[]letters = new int[256];
+            int[] letters = new int[256];
             foreach (var ch in orig)
             {
-                letters[ch] = letters[ch]+1;
+                letters[ch] = letters[ch] + 1;
             }
             foreach (var ch in permu)
             {
-                letters[ch]= letters[ch]-1;
+                letters[ch] = letters[ch] - 1;
                 if (letters[ch] < 0)
                     return false;
             }
