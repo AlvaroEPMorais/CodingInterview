@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LinkedList
+﻿namespace LinkedList
 {
     public static class ReturnKthToLast<T>
     {
-       
         public static ListNode<T> Method_1(MyList<T> list, int k)
         {
             ListNode<T> runner = list.Head;
             int num = k;
-           
+
             while (num > 0 && runner != null)
             {
                 runner = runner.Next;

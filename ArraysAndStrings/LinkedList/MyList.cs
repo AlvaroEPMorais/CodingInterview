@@ -69,5 +69,6 @@ namespace LinkedList
             }
             Console.WriteLine("end\n####################\n");
         }
+
     }
 }
