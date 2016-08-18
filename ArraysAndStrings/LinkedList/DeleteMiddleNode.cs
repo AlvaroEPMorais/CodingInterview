@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LinkedList
+﻿namespace LinkedList
 {
     public static class DeleteMiddleNode<T>
     {
@@ -17,9 +11,9 @@ namespace LinkedList
                 ++cnt;
                 head = head.Next;
             }
-            cnt = cnt/2;
+            cnt = cnt / 2;
             head = list.Head;
-            while (cnt >2)
+            while (cnt > 2)
             {
                 --cnt;
                 head = head.Next;

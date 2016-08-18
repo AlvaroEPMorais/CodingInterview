@@ -50,13 +50,13 @@ namespace LinkedList
             Console.WriteLine("############################################");
             Console.WriteLine("Sum List");
             Console.WriteLine("Reverse order");
-            MyList<int> list1 = new MyList<int>(7);list1.AppenToTail(1); list1.AppenToTail(6);
+            MyList<int> list1 = new MyList<int>(7); list1.AppenToTail(1); list1.AppenToTail(6);
             MyList<int> list2 = new MyList<int>(5); list2.AppenToTail(9); list2.AppenToTail(2);
             SumLists.Method_ReverseOrder(list1, list2).ShowList();
             Console.WriteLine("############################################");
             Console.WriteLine("Foward order");
-             list1 = new MyList<int>(6); list1.AppenToTail(1); list1.AppenToTail(7);
-             list2 = new MyList<int>(2); list2.AppenToTail(9); list2.AppenToTail(5);
+            list1 = new MyList<int>(6); list1.AppenToTail(1); list1.AppenToTail(7);
+            list2 = new MyList<int>(2); list2.AppenToTail(9); list2.AppenToTail(5);
             SumLists.Method_FowardOrder(list1, list2).ShowList();
 
             Console.ReadLine();
