@@ -98,12 +98,44 @@ namespace ArraysAndStrings
                 Console.WriteLine(IntegerStringConversion.StringToInt(num));
             }
             Console.WriteLine("#############################################");
+            Console.WriteLine("Merge Two Orderded Arrays into one orded Array ");
+            int[] array1 = { 1, 3, 5, 7, 9 };
+            int[] array2 = { 2, 4, 6, 8 };
+            int[] res = MergingTwoArraysInOrder.Method_1(array1, array2);
+            ShowIntArray(res);
+            int[] array3 = { 1, 3, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
+            int[] array4 = { 2, 4, 6, 8 };
+            res = MergingTwoArraysInOrder.Method_1(array3, array4);
+            ShowIntArray(res);
+            Console.WriteLine("#############################################");
+            Console.WriteLine("Reverse Sentece");
+            Console.Write("The fox jumps over the fence ->");
+            Console.WriteLine(ReverseSetence.Method_1("The fox jumps over the fence"));
+            Console.Write("Call me Ismael ->");
+            Console.WriteLine(ReverseSetence.Method_1("Call me Ismael"));
+            Console.WriteLine("#############################################");
+            Console.WriteLine("Max Profit Method 1");
+            int[] array5 = { -1, 5, 0, 1, 2, -3 };
+            MaxDifferenceProblem.Method_1(array5);
+            Console.WriteLine("#############################################");
+            MaxDifferenceProblem.Method_1(GenerateRandomArray(10000, 10000, -10000));
+            Console.WriteLine("#############################################");
+            MaxDifferenceProblem.Method_1(GenerateRandomArray(10000, 10000, -10000));
+            Console.WriteLine("Max Profit Method 1");
+            int[] array6 = { -1, 5, 0, 1, 2, -3 };
+            MaxDifferenceProblem.Method_2(array6);
+            Console.WriteLine("#############################################");
+            MaxDifferenceProblem.Method_2(GenerateRandomArray(10000, 10000, -10000));
+            Console.WriteLine("#############################################");
+            MaxDifferenceProblem.Method_2(GenerateRandomArray(10000, 10000, -10000));
+
+
             Console.ReadLine();
         }
 
         private static int[,] GenerateMatrix(int v)
         {
-            Random ran = new Random();
+            Random ran = new Random((int)DateTime.Now.Ticks);
             int[,] matrix = new int[v, v];
             for (int i = 0; i < v; ++i)
             {
@@ -114,6 +146,26 @@ namespace ArraysAndStrings
             }
             matrix.showMatrix();
             return matrix;
+        }
+
+        private static void ShowIntArray(int[] array)
+        {
+            foreach (var num in array)
+            {
+                Console.Write(num + " - ");
+            }
+            Console.WriteLine();
+        }
+
+        private static int[] GenerateRandomArray(int size, int max, int min = 0)
+        {
+            int[] res = new int[size];
+            Random ran = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < res.Length; ++i)
+            {
+                    res[i] = ran.Next(min, max);
+            }
+            return res;
         }
     }
 }

@@ -58,7 +58,38 @@ namespace LinkedList
             list1 = new MyList<int>(6); list1.AppenToTail(1); list1.AppenToTail(7);
             list2 = new MyList<int>(2); list2.AppenToTail(9); list2.AppenToTail(5);
             SumLists.Method_FowardOrder(list1, list2).ShowList();
-
+            Console.WriteLine("############################################");
+            Console.WriteLine("############################################");
+            Console.WriteLine("Reverse List");
+            MyList<char> listChar = new MyList<char>('A');
+            for (char i = 'B'; i <= 'Z'; ++i)
+            {
+                listChar.AppenToTail(i);
+            }
+            listChar.ShowList();
+            ReverseList<char>.Method_1(listChar).ShowList();
+            Console.WriteLine("############################################");
+            Console.WriteLine("############################################");
+            Console.WriteLine("Remove kth element from last");
+            listChar = new MyList<char>('A'); listChar.AppenToTail('B'); listChar.AppenToTail('C'); listChar.AppenToTail('D'); listChar.AppenToTail('E');
+            listChar.ShowList();
+            RemoveKthElementFromLast<char>.Method_1(listChar,3).ShowList();
+            Console.WriteLine("############################################");
+            Console.WriteLine("############################################");
+            Console.WriteLine("Detect circular list");
+            ListNode<char> nodeA = new ListNode<char>('A');
+            ListNode<char> nodeB = new ListNode<char>('B');
+            ListNode<char> nodeC = new ListNode<char>('C');
+            nodeA.Next = nodeB;
+            nodeB.Next = nodeC;
+            nodeC.Next = nodeA;
+            MyList<char> badList = new MyList<char>(nodeA);
+            Console.WriteLine("A -> B -> C -> A (unable to use showList)");
+            Console.WriteLine("############################################");
+            Console.WriteLine(DetectCircleList<char>.Method_1(badList));
+            Console.WriteLine("############################################");
+            listChar.ShowList();
+            Console.WriteLine(DetectCircleList<char>.Method_1(listChar));
             Console.ReadLine();
         }
 

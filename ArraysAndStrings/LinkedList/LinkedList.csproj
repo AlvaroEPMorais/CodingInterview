@@ -44,12 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeleteMiddleNode.cs" />
+    <Compile Include="DetectCircleList.cs" />
     <Compile Include="ListNode.cs" />
     <Compile Include="MyList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveDups.cs" />
+    <Compile Include="RemoveKthElementFromLast.cs" />
     <Compile Include="ReturnKthToLast.cs" />
+    <Compile Include="ReverseList.cs" />
     <Compile Include="SumLists.cs" />
   </ItemGroup>
   <ItemGroup>

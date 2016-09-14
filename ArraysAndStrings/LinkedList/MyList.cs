@@ -2,9 +2,12 @@
 
 namespace LinkedList
 {
+
     public class MyList<T>
     {
         public ListNode<T> Head = null;
+
+
 
         public MyList()
         {
@@ -13,8 +16,7 @@ namespace LinkedList
 
         public MyList(ListNode<T> head)
         {
-            Head = head;
-            Head.Next = null;
+            Head = head;           
         }
 
         public MyList(T data)
@@ -69,5 +71,8 @@ namespace LinkedList
             }
             Console.WriteLine("end\n####################\n");
         }
+
+
+      
     }
 }
